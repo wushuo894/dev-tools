@@ -54,8 +54,8 @@ watch(platform, () => {
     <el-table-column prop="date" label="日期"/>
     <el-table-column label="操作" align="center">
       <template #default="scope">
-        <el-button text bg type="primary" @click="copy(releasesView[scope.$index].link)">复制</el-button>
-        <el-button text bg type="primary" @click="openUrl(releasesView[scope.$index].link)">下载</el-button>
+        <el-button text bg type="primary" @click="copy(releasesView[scope.$index].link)" icon="CopyDocument">复制</el-button>
+        <el-button text bg type="primary" @click="openUrl(releasesView[scope.$index].link)" icon="Download">下载</el-button>
       </template>
     </el-table-column>
   </el-table>

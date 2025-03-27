@@ -117,15 +117,15 @@ let batchCopy = () => {
     </el-table-column>
     <el-table-column label="操作" align="center">
       <template #default="scope">
-        <el-button text bg type="primary" @click="copy(releasesView[scope.$index].link)">复制</el-button>
-        <el-button text bg type="primary" @click="openUrl(releasesView[scope.$index].link)">下载</el-button>
+        <el-button text bg type="primary" @click="copy(releasesView[scope.$index].link)" icon="CopyDocument">复制</el-button>
+        <el-button text bg type="primary" @click="openUrl(releasesView[scope.$index].link)" icon="Download">下载</el-button>
       </template>
     </el-table-column>
   </el-table>
   <div style="width: 100%;justify-content: end;display: flex;margin:12px 0;">
     <div>
-      <el-button text bg type="primary" @click="batchCopy" :disabled="!selectReleasesView.length">批量复制</el-button>
-      <el-button text bg type="primary" @click="batchOpenUrl" :disabled="!selectReleasesView.length">批量下载
+      <el-button text bg type="primary" @click="batchCopy" :disabled="!selectReleasesView.length" icon="CopyDocument">批量复制</el-button>
+      <el-button text bg type="primary" @click="batchOpenUrl" :disabled="!selectReleasesView.length" icon="Download">批量下载
       </el-button>
     </div>
   </div>

@@ -32,7 +32,7 @@ let download = () => {
         </el-select>
       </el-form-item>
       <div>
-        <el-button bg text :disabled="!version" @click="download">下载</el-button>
+        <el-button bg text type="primary" :disabled="!version" @click="download" icon="Download">下载</el-button>
       </div>
     </el-form>
   </div>
