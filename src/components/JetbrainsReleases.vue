@@ -108,7 +108,14 @@ let batchCopy = () => {
         </span>
       </template>
     </el-table-column>
-    <el-table-column label="操作">
+    <el-table-column label="大小">
+      <template #default="scope">
+        <span>
+          {{ Number.parseFloat(releasesView[scope.$index].size / 1024 / 1024).toFixed(2) }}MB
+        </span>
+      </template>
+    </el-table-column>
+    <el-table-column label="操作" align="center">
       <template #default="scope">
         <el-button text bg type="primary" @click="copy(releasesView[scope.$index].link)">复制</el-button>
         <el-button text bg type="primary" @click="openUrl(releasesView[scope.$index].link)">下载</el-button>
